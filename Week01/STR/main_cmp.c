@@ -53,44 +53,38 @@ int		main(void)
 
 /* strncmp */
 	ft_putendl("--- strncmp? --- ");
-	printf("%s > %s ? n = 3\n", s1, s1);
-	ft_putnbr(ft_strncmp(s1, s1, 3));
+	printf("%s > %s ? n = 0\n", s1, s1);
+	ft_putnbr(ft_strncmp(s1, s1, 0));
 	ft_putchar('\n');
-	printf("%s > %s ? \n", s1, s2);
-	ft_putnbr(ft_strncmp(s1, s2, 1));
+	printf("%s > %s ? n = 2\n", s1, s2);
+	ft_putnbr(ft_strncmp(s1, s2, 2));
 	ft_putchar('\n');
-	printf("%s > %s ? \n", s2, s1);
-	ft_putnbr(ft_strncmp(s2, s1, 1));
+	printf("%s > %s ? n = 4\n", s3, s4);
+	ft_putnbr(ft_strncmp(s3, s4, 4));
 	ft_putchar('\n');
-	printf("%s > %s ? \n", s3, s4);
-	ft_putnbr(ft_strncmp(s3, s4, 1));
+	printf("%s > %s ? n = 5\n", s4, s3);
+	ft_putnbr(ft_strncmp(s4, s3, 5));
 	ft_putchar('\n');
-	printf("%s > %s ? \n", s4, s3);
-	ft_putnbr(ft_strncmp(s4, s3, 1));
-	ft_putchar('\n');
-	printf("%s > %s ? \n", "\0", "k");
-	ft_putnbr(ft_strncmp("\0", "k", 1));
+	printf("%s > %s ? n = 2\n", "\0", "k");
+	ft_putnbr(ft_strncmp("\0", "k", 2));
 	ft_putchar('\n');
 	ft_putchar('\n');
 
 	ft_putendl("Real strncmp test : ");
-	printf("%s > %s ? \n", s1, s1);
-	ft_putnbr(strncmp(s1, s1, 1));
+	printf("%s > %s ? n = 0\n", s1, s1);
+	ft_putnbr(strncmp(s1, s1, 0));
 	ft_putchar('\n');
-	printf("%s > %s ? \n", s1, s2);
-	ft_putnbr(strncmp(s1, s2, 1));
+	printf("%s > %s ? n = 2\n", s1, s2);
+	ft_putnbr(strncmp(s1, s2, 2));
 	ft_putchar('\n');
-	printf("%s > %s ? \n", s2, s1);
-	ft_putnbr(strncmp(s2, s1, 1));
+	printf("%s > %s ? n = 4\n", s3, s4);
+	ft_putnbr(strncmp(s3, s4, 4));
 	ft_putchar('\n');
-	printf("%s > %s ? \n", s3, s4);
-	ft_putnbr(strncmp(s3, s4, 1));
+	printf("%s > %s ? n = 5\n", s4, s3);
+	ft_putnbr(strncmp(s4, s3, 5));
 	ft_putchar('\n');
-	printf("%s > %s ? \n", s4, s3);
-	ft_putnbr(strncmp(s4, s3, 1));
-	ft_putchar('\n');
-	printf("%s > %s ? \n", "\0", "k");
-	ft_putnbr(strncmp("\0", "k", 1));
+	printf("%s > %s ? n = 2\n", "\0", "k");
+	ft_putnbr(strncmp("\0", "k", 2));
 
 	return (0);
 }

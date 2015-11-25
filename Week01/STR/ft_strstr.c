@@ -1,33 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agrele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/25 18:09:11 by agrele            #+#    #+#             */
-/*   Updated: 2015/11/25 22:46:26 by agrele           ###   ########.fr       */
+/*   Created: 2015/11/25 21:07:13 by agrele            #+#    #+#             */
+/*   Updated: 2015/11/25 22:20:25 by agrele           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-
-/* What happens if s1 is longer than s2, or the other way around ? */
-
-int		ft_strcmp(const char *s1, const char *s2)
+char	*ft_strstr(const char *s1, const char *s2)
 {
 	int i;
-	int res;
-	
-	i = 0;
-	res = 0;
-	while (s1[i]  || s2[i])
+	int n;
+
+	if (s2[0])
 	{
-		res = s1[i] - s2[i];
-		if (res != 0)
-			break;
-		i++;
+		i = 0;
+		while (s1[i])
+		{
+			n = 0;
+			while (s1[i + n] == s2[n])
+			{
+				if (s2[n + 1] == '\0')
+					return ((char *)s1 + i);
+				n++;
+			}
+			i++;
+		}
+		return (NULL);
 	}
-	return (res);
+	return ((char*)s1);
 }
