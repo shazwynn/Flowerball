@@ -6,7 +6,7 @@
 /*   By: agrele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 18:38:31 by agrele            #+#    #+#             */
-/*   Updated: 2015/11/25 16:50:41 by agrele           ###   ########.fr       */
+/*   Updated: 2015/11/25 19:48:49 by agrele           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,14 @@ int		ft_isprint(int c);
 /* NEW */
 int		ft_strlen(const char *s);
 char	*ft_strcpy(char *restrict dst, const char *restrict src);
+char	*ft_strncpy(char *restrict dst, const char *restrict src, size_t n);
+void	ft_strclr(char *s);
+int		ft_strcmp(const char *s1, const char *s2);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
+
+/* EXTRA */
+int		ft_ispos(int n);
+int		ft_isneg(int n);
+char	*ft_putsign(int n);
 
 #endif 
