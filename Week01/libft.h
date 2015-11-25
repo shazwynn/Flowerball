@@ -6,7 +6,7 @@
 /*   By: agrele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 18:38:31 by agrele            #+#    #+#             */
-/*   Updated: 2015/11/24 18:45:18 by agrele           ###   ########.fr       */
+/*   Updated: 2015/11/25 16:50:41 by agrele           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,6 @@ int		ft_isprint(int c);
 
 /* NEW */
 int		ft_strlen(const char *s);
+char	*ft_strcpy(char *restrict dst, const char *restrict src);
 
 #endif 
