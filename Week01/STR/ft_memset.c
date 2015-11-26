@@ -1,29 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agrele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/25 16:25:05 by agrele            #+#    #+#             */
-/*   Updated: 2015/11/26 13:27:11 by agrele           ###   ########.fr       */
+/*   Created: 2015/11/26 13:36:19 by agrele            #+#    #+#             */
+/*   Updated: 2015/11/26 13:37:33 by agrele           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-/* Should not work when Desination is shorter than source ! */
-
-char	*ft_strcpy(char *dst, const char *src)
+void	*ft_memset(void *b, int c, size_t len);
 {
-	int i;
-
-	i = 0;
-	while (src[i])
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	dst[i] = '\0';
-	return (dst);
+	(void)b;
+	(void)c;
+	(void)len;
 }

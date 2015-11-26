@@ -6,13 +6,13 @@
 /*   By: agrele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/25 16:56:29 by agrele            #+#    #+#             */
-/*   Updated: 2015/11/25 17:59:33 by agrele           ###   ########.fr       */
+/*   Updated: 2015/11/26 13:27:43 by agrele           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-char	*ft_strncpy(char *restrict dst, const char *restrict src, size_t n)
+char	*ft_strncpy(char *dst, const char *src, size_t n)
 {
 	int i;
 

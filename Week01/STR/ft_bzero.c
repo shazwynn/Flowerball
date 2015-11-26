@@ -1,29 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agrele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/25 16:25:05 by agrele            #+#    #+#             */
-/*   Updated: 2015/11/26 13:27:11 by agrele           ###   ########.fr       */
+/*   Created: 2015/11/26 13:38:06 by agrele            #+#    #+#             */
+/*   Updated: 2015/11/26 13:38:19 by agrele           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-/* Should not work when Desination is shorter than source ! */
-
-char	*ft_strcpy(char *dst, const char *src)
+void	ft_bzero(void *s, size_t n);
 {
-	int i;
-
-	i = 0;
-	while (src[i])
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	dst[i] = '\0';
-	return (dst);
+	(void)s;
+	(void)n;
 }

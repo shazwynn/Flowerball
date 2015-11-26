@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agrele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/25 16:25:05 by agrele            #+#    #+#             */
-/*   Updated: 2015/11/26 13:27:11 by agrele           ###   ########.fr       */
+/*   Created: 2015/11/26 12:59:14 by agrele            #+#    #+#             */
+/*   Updated: 2015/11/26 13:13:39 by agrele           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-/* Should not work when Desination is shorter than source ! */
+/* allocates mem for a copy of s1, does the copy, returns pointer to it */
 
-char	*ft_strcpy(char *dst, const char *src)
+char	*ft_strdup(const char *s1)
 {
-	int i;
+	char *dst;
 
-	i = 0;
-	while (src[i])
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	dst[i] = '\0';
+	dst = (char*)malloc(sizeof(char)*(ft_strlen(s1) + 1));
+	ft_strcpy(dst, s1);
 	return (dst);
 }

@@ -6,7 +6,7 @@
 /*   By: agrele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 18:38:31 by agrele            #+#    #+#             */
-/*   Updated: 2015/11/25 22:46:31 by agrele           ###   ########.fr       */
+/*   Updated: 2015/11/26 13:45:57 by agrele           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,11 @@
 
 # include <unistd.h>
 # include <string.h>
+# include <stdlib.h>
 # define TRUE 1
 # define FALSE 0
 
-/* idiot 
-# define HEADER "../libft.h"
-*/
+/* REMOVE ALL RESTRICT */ 
 
 /* NORMINETTE OK */
 
@@ -42,11 +41,9 @@ int		ft_isascii(int c);
 int		ft_isprint(int c);
 
 /* STR */
-
-/* NEW */
 int		ft_strlen(const char *s);
-char	*ft_strcpy(char *restrict dst, const char *restrict src);
-char	*ft_strncpy(char *restrict dst, const char *restrict src, size_t n);
+char	*ft_strcpy(char *dst, const char *src);
+char	*ft_strncpy(char *dst, const char *src, size_t n);
 void	ft_strclr(char *s);
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
@@ -57,5 +54,27 @@ char	*ft_strnstr(const char *s1, const char *s2, size_t n);
 int		ft_ispos(int n);
 int		ft_isneg(int n);
 char	*ft_putsign(int n);
+void	ft_swap(int *a, int *b);
+
+/* NEW */
+char	*ft_strdup(const char *s1);
+
+
+/* MISSING ~ PART 1 */
+char	*ft_strcat(char *s1, const char *s2);
+char	*ft_strncat(char *s1, const char *s2, size_t n);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
+void	*ft_memset(void *b, int c, size_t len);
+void	ft_bzero(void *s, size_t n);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
+void	*ft_memmove(void *dst, const void *src, size_t len);
+void	*ft_memchr(const void *s, int c, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
+int		ft_atoi(const char *str);
+int		ft_toupper(int c);
+int		ft_tolower(int c);
 
 #endif 
