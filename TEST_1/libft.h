@@ -6,7 +6,7 @@
 /*   By: agrele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 18:38:31 by agrele            #+#    #+#             */
-/*   Updated: 2015/11/26 19:01:39 by agrele           ###   ########.fr       */
+/*   Updated: 2015/11/26 17:44:06 by agrele           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,10 +72,9 @@ void	ft_swap(int *a, int *b);
 
 /* -------- NEW --------*/
 
-/* -------- MEM -------- */
-void	*ft_memset(void *b, int c, size_t len);
 
 /* -------- MISSING ~ PART 1 -------- */
+void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n);

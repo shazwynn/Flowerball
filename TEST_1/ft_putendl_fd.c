@@ -1,33 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agrele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/26 13:32:49 by agrele            #+#    #+#             */
-/*   Updated: 2015/11/26 17:08:33 by agrele           ###   ########.fr       */
+/*   Created: 2015/11/24 12:47:51 by agrele            #+#    #+#             */
+/*   Updated: 2015/11/24 17:24:43 by agrele           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-/* locate first occurence of character c (converted to char)
- * in string s. The terminating \0 is considered part of the string.
- * So if you search for \0 you locate it. 
- * Return pointer to the char, or NULL if it doesn't appear */
-
-char	*ft_strchr(const char *s, int c)
+void	ft_putendl_fd(char const *s, int fd)
 {
-	int i;
-
-	i = 0;
-	while (s[i])
-	{
-		if (s[i] == c)
-			return ((char *)s + i);
-		i++;	
-	}
-	return (NULL);
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }
-

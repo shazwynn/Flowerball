@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agrele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/26 13:32:49 by agrele            #+#    #+#             */
-/*   Updated: 2015/11/26 17:08:33 by agrele           ###   ########.fr       */
+/*   Created: 2015/11/25 16:25:05 by agrele            #+#    #+#             */
+/*   Updated: 2015/11/26 13:27:11 by agrele           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-/* locate first occurence of character c (converted to char)
- * in string s. The terminating \0 is considered part of the string.
- * So if you search for \0 you locate it. 
- * Return pointer to the char, or NULL if it doesn't appear */
+/* Should not work when Desination is shorter than source ! */
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strcpy(char *dst, const char *src)
 {
 	int i;
 
 	i = 0;
-	while (s[i])
+	while (src[i])
 	{
-		if (s[i] == c)
-			return ((char *)s + i);
-		i++;	
+		dst[i] = src[i];
+		i++;
 	}
-	return (NULL);
+	dst[i] = '\0';
+	return (dst);
 }
-

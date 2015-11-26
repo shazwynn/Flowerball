@@ -15,12 +15,12 @@ SRC = WRITE/ft_putchar.c \
 	  IS/ft_isprint.c \
 	  STR/ft_atoi.c \
 	  STR/ft_bzero.c \
-	  STR/ft_memccpy.c \
-	  STR/ft_memchr.c \
-	  STR/ft_memcmp.c \
-	  STR/ft_memcpy.c \
-	  STR/ft_memmove.c \
-	  STR/ft_memset.c \
+	  MEM/ft_memccpy.c \
+	  MEM/ft_memchr.c \
+	  MEM/ft_memcmp.c \
+	  MEM/ft_memcpy.c \
+	  MEM/ft_memmove.c \
+	  MEM/ft_memset.c \
 	  STR/ft_strcat.c \
 	  STR/ft_strchr.c \
 	  STR/ft_strclr.c \

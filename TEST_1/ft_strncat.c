@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agrele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/26 13:32:49 by agrele            #+#    #+#             */
-/*   Updated: 2015/11/26 17:08:33 by agrele           ###   ########.fr       */
+/*   Created: 2015/11/26 13:28:29 by agrele            #+#    #+#             */
+/*   Updated: 2015/11/26 16:06:18 by agrele           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-/* locate first occurence of character c (converted to char)
- * in string s. The terminating \0 is considered part of the string.
- * So if you search for \0 you locate it. 
- * Return pointer to the char, or NULL if it doesn't appear */
-
-char	*ft_strchr(const char *s, int c)
+char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
 	int i;
+	int len;
 
+	len = ft_strlen(s1);
 	i = 0;
-	while (s[i])
+	while (s2[i] && n > 0)
 	{
-		if (s[i] == c)
-			return ((char *)s + i);
-		i++;	
+		s1[len + i] = s2[i];
+		i++;
+		n--;
 	}
-	return (NULL);
+	s1[i + len] = '\0';
+	return (s1);
 }
-

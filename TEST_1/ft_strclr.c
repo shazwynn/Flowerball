@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strclr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agrele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/26 13:32:49 by agrele            #+#    #+#             */
-/*   Updated: 2015/11/26 17:08:33 by agrele           ###   ########.fr       */
+/*   Created: 2015/11/25 18:00:49 by agrele            #+#    #+#             */
+/*   Updated: 2015/11/26 13:26:49 by agrele           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-/* locate first occurence of character c (converted to char)
- * in string s. The terminating \0 is considered part of the string.
- * So if you search for \0 you locate it. 
- * Return pointer to the char, or NULL if it doesn't appear */
+/* Replace all by '\0'. If you replace only the first one, then the rest of the string's
+ * characters will still be written in the memory. Try printing str+1, +2, etc... to see */
 
-char	*ft_strchr(const char *s, int c)
+void	ft_strclr(char *s)
 {
 	int i;
 
 	i = 0;
 	while (s[i])
 	{
-		if (s[i] == c)
-			return ((char *)s + i);
-		i++;	
+		s[i] = '\0';
+		i++;
 	}
-	return (NULL);
 }
-

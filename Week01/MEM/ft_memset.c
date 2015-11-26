@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agrele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/26 13:32:49 by agrele            #+#    #+#             */
-/*   Updated: 2015/11/26 17:08:33 by agrele           ###   ########.fr       */
+/*   Created: 2015/11/26 13:36:19 by agrele            #+#    #+#             */
+/*   Updated: 2015/11/26 18:42:54 by agrele           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-/* locate first occurence of character c (converted to char)
- * in string s. The terminating \0 is considered part of the string.
- * So if you search for \0 you locate it. 
- * Return pointer to the char, or NULL if it doesn't appear */
+/* how to deal with the fact that trying to add ints to a void* ?? */
 
-char	*ft_strchr(const char *s, int c)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	int i;
+	unsigned char *count;
 
-	i = 0;
-	while (s[i])
+	if (len == 0)
+		return (b);
+	count = (unsigned char *)b;
+
+	while (len > 0)
 	{
-		if (s[i] == c)
-			return ((char *)s + i);
-		i++;	
+		*count = (unsigned char)c;
+		count++;
+		ft_putendl("hi\n");
+		len --;
 	}
-	return (NULL);
+	return (b);
 }
-
