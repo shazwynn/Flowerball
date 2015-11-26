@@ -6,13 +6,13 @@
 /*   By: agrele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 13:38:06 by agrele            #+#    #+#             */
-/*   Updated: 2015/11/26 13:38:19 by agrele           ###   ########.fr       */
+/*   Updated: 2015/11/26 14:33:28 by agrele           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void	ft_bzero(void *s, size_t n);
+void	ft_bzero(void *s, size_t n)
 {
 	(void)s;
 	(void)n;

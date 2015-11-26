@@ -6,13 +6,13 @@
 /*   By: agrele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 13:42:32 by agrele            #+#    #+#             */
-/*   Updated: 2015/11/26 13:43:02 by agrele           ###   ########.fr       */
+/*   Updated: 2015/11/26 14:33:19 by agrele           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int		ft_atoi(const char *str);
+int		ft_atoi(const char *str)
 {
 	(void)str;
 	return (0);

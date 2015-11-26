@@ -6,13 +6,13 @@
 /*   By: agrele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 13:32:49 by agrele            #+#    #+#             */
-/*   Updated: 2015/11/26 13:35:33 by agrele           ###   ########.fr       */
+/*   Updated: 2015/11/26 14:32:24 by agrele           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-char	*ft_strchr(const char *s, int c);
+char	*ft_strchr(const char *s, int c)
 {
 	(void)s;
 	(void)c;

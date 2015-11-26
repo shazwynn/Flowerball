@@ -6,13 +6,13 @@
 /*   By: agrele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 13:31:20 by agrele            #+#    #+#             */
-/*   Updated: 2015/11/26 13:32:42 by agrele           ###   ########.fr       */
+/*   Updated: 2015/11/26 14:32:12 by agrele           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size);
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 		(void)dst;
 		(void)src;

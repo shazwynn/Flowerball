@@ -6,16 +6,17 @@
 /*   By: agrele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 13:38:28 by agrele            #+#    #+#             */
-/*   Updated: 2015/11/26 13:38:55 by agrele           ###   ########.fr       */
+/*   Updated: 2015/11/26 14:38:13 by agrele           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n);
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	(void)dst;
 	(void)src;
 	(void)n;
+	return ((void *)n);
 }
 

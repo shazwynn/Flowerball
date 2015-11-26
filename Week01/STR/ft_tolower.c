@@ -6,13 +6,13 @@
 /*   By: agrele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 13:43:42 by agrele            #+#    #+#             */
-/*   Updated: 2015/11/26 13:44:07 by agrele           ###   ########.fr       */
+/*   Updated: 2015/11/26 14:31:34 by agrele           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int		ft_tolower(int c);
+int		ft_tolower(int c)
 {
 	(void)c;
 	return (0);

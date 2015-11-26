@@ -6,15 +6,16 @@
 /*   By: agrele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 13:40:34 by agrele            #+#    #+#             */
-/*   Updated: 2015/11/26 13:40:55 by agrele           ###   ########.fr       */
+/*   Updated: 2015/11/26 14:38:34 by agrele           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len);
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	(void)dst;
 	(void)src;
 	(void)len;
+	return ((void *)len);
 }

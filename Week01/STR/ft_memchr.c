@@ -6,15 +6,16 @@
 /*   By: agrele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 13:41:15 by agrele            #+#    #+#             */
-/*   Updated: 2015/11/26 13:41:26 by agrele           ###   ########.fr       */
+/*   Updated: 2015/11/26 14:36:43 by agrele           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n);
+void	*ft_memchr(const void *s, int c, size_t n)
 {
 	(void)s;
 	(void)c;
 	(void)n;
+	return ((void*)n);
 }

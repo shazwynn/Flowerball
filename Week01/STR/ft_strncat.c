@@ -6,7 +6,7 @@
 /*   By: agrele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 13:28:29 by agrele            #+#    #+#             */
-/*   Updated: 2015/11/26 13:29:30 by agrele           ###   ########.fr       */
+/*   Updated: 2015/11/26 16:06:18 by agrele           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,17 @@
 
 char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	(void)s1;
-	(void)s2;
-	(void)n;
-	return ("banane");
+	int i;
+	int len;
+
+	len = ft_strlen(s1);
+	i = 0;
+	while (s2[i] && n > 0)
+	{
+		s1[len + i] = s2[i];
+		i++;
+		n--;
+	}
+	s1[i + len] = '\0';
+	return (s1);
 }
