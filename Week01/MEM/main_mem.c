@@ -4,6 +4,22 @@
 
 int		main(void)
 {
+/* bzero */
+	ft_putendl("--- bzero? --- ");
+	ft_putendl("Real bzero test : ");
+	char a[10];
+	printf("%s\n", a);
+	bzero(a, 10);
+	printf("%s\n", a);
+
+	ft_putendl("My bzero test : ");
+	char z[10];
+	printf("%s\n", z);
+	ft_bzero(z, 10);
+	printf("%s\n", z);
+	
+	return (0);
+
 /* memset */
 	ft_putendl("--- memset? --- ");
 	ft_putendl("Real memset test : ");
