@@ -18,8 +18,6 @@ int		main(void)
 	ft_bzero(z, 10);
 	printf("%s\n", z);
 	
-	return (0);
-
 /* memset */
 	ft_putendl("--- memset? --- ");
 	ft_putendl("Real memset test : ");
@@ -33,6 +31,20 @@ int		main(void)
 	printf("%s\n", x);
 	ft_memset(x, 'a', 10);
 	printf("%s\n", x);
+	
+/* memcpy */
+	ft_putendl("--- memcpy? --- ");
+	ft_putendl("Real memcpy test : ");
+	printf("%s\n", x);
+	char y[10];
+	memcpy(y, x, 10);
+	printf("%s\n", y);
+
+	ft_putendl("My memcpy test : ");
+	char w[10];
+	printf("%s\n", x);
+	ft_memcpy(w, x, 10);
+	printf("%s\n", w);
 	
 	return (0);
 }

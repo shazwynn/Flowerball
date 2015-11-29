@@ -26,7 +26,6 @@ void	*ft_memset(void *b, int c, size_t len)
 	{
 		*count = (unsigned char)c;
 		count++;
-		ft_putendl("hi\n");
 		len --;
 	}
 	return (b);
