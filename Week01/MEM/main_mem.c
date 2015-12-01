@@ -45,6 +45,27 @@ int		main(void)
 	printf("%s\n", x);
 	ft_memcpy(w, x, 10);
 	printf("%s\n", w);
-	
+
+/* memccpy */
+	ft_putendl("--- memccpy? --- ");
+	ft_putendl("Real memccpy test : ");
+	const char one[] = "turtle";
+	const char two[] = "pancake";
+	char dst[15];
+	bzero(dst, 15);
+	printf("%s\n", one);
+	printf("%s\n", memccpy(dst, one, 'n', 6));
+	bzero(dst, 15);
+	printf("%s, = %p\n", two, two);
+	printf("%s, = %p\n", memccpy(dst, two, 'n', 15), memccpy(dst, two, 'n', 15));
+
+	ft_putendl("My memcpy test : ");
+	bzero(dst, 15);
+	printf("%s\n", one);
+	printf("%s\n", ft_memccpy(dst, one, 'n', 6));
+	bzero(dst, 15);
+	printf("%s, = %p\n", two, two);
+	printf("%s, = %p\n", ft_memccpy(dst, two, 'n', 15), ft_memccpy(dst, two, 'n', 15));
+
 	return (0);
 }

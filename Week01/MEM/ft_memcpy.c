@@ -6,21 +6,22 @@
 /*   By: agrele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 13:38:28 by agrele            #+#    #+#             */
-/*   Updated: 2015/11/26 14:38:13 by agrele           ###   ########.fr       */
+/*   Updated: 2015/12/01 12:31:48 by agrele           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	unsigned int i;
+	size_t i;
 
 	i = 0;
 	while (i < n)
 	{
-		dest[i] = src [i];
+		((char *)dst)[i] = ((const char *)src)[i];
+		i++;
 	}
-	return (dest);
+	return (dst);
 }
 

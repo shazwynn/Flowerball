@@ -14,7 +14,7 @@ SRC = WRITE/ft_putchar.c \
 	  IS/ft_isdigit.c \
 	  IS/ft_isprint.c \
 	  STR/ft_atoi.c \
-	  STR/ft_bzero.c \
+	  MEM/ft_bzero.c \
 	  MEM/ft_memccpy.c \
 	  MEM/ft_memchr.c \
 	  MEM/ft_memcmp.c \
