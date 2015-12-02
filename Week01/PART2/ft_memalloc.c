@@ -1,41 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agrele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/02 17:46:11 by agrele            #+#    #+#             */
-/*   Updated: 2015/12/02 18:36:17 by agrele           ###   ########.fr       */
+/*   Created: 2015/12/02 19:13:34 by agrele            #+#    #+#             */
+/*   Updated: 2015/12/02 19:55:34 by agrele           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-char	*ft_strjoin(char const *s1, char const *s2)
+void	*ft_memalloc(size_t size)
 {
-	char *join;
-	int i;
-	int j;
+/* if size = 0 then return(something) 
+ * bzero on all zone size */
 
-	join = ft_strnew(ft_strlen(s1) + ft_strlen(s2) + 1);
-	i = 0;
-	j = 0;
-	if (join)
+	void	*zone;
+	zone = (void *)malloc(size);
+	if (zone)
 	{
-		while (s1[i])
-		{
-			join[i] = s1[i];
-			i++;
-		}
-		while (s2[j])
-		{
-			join[i] = s2[j];
-			i++;
-			j++;
-		}
-		join[i] = '\0';
-		return (join);
+//		ft_bzero(zone, size);
+		zone = 0;
+		return (zone);
 	}
 	return (NULL);
 }
