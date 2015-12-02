@@ -6,7 +6,7 @@
 /*   By: agrele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 18:38:31 by agrele            #+#    #+#             */
-/*   Updated: 2015/12/02 16:39:40 by agrele           ###   ########.fr       */
+/*   Updated: 2015/12/02 17:51:53 by agrele           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,6 @@ int		ft_isneg(int n);
 char	*ft_putsign(int n);
 void	ft_swap(int *a, int *b);
 
-/* -------- NEW --------*/
 
 /* -------- MEM -------- */
 /* - OK - */
@@ -81,10 +80,16 @@ int		ft_atoi(const char *str);
 /* - KO - */
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
 
-/* -------- MISSING ~ PART 2 -------- */
+
+/* -------- NEW --------*/
 char	*ft_strnew(size_t size);
-void	ft_strdel(char **as);
 char	*ft_strsub(char const *s, unsigned int start, size_t len);
+/* - OK - */
+/* - KO - */
+void	ft_strdel(char **as);
+
+/* -------- MISSING ~ PART 2 -------- */
+
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s);
 char	**ft_strsplit(char const *s, char c);
@@ -96,7 +101,7 @@ int		ft_strnequ(char const *s1, char const *s2, size_t n);
 void	ft_striter(char *s, void (*f)(char *));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 char	*ft_strmap(char const *s, char (*f)(char));
-char	*ft_strmapi(char const *s, char (*f)(unsigned intm char));
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	*ft_memalloc(size_t size);
 void	ft_memdel(void **ap);
 

@@ -9,4 +9,4 @@ make re
 make clean
 cp libft.a ../TEST_1
 cd ../../Moulitest
-make libft_part1
+make libft_part2
