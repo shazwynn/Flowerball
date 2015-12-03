@@ -6,7 +6,7 @@
 /*   By: agrele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 18:38:31 by agrele            #+#    #+#             */
-/*   Updated: 2015/12/02 20:06:22 by agrele           ###   ########.fr       */
+/*   Updated: 2015/12/03 23:28:24 by agrele           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,8 @@ int		ft_ispos(int n);
 int		ft_isneg(int n);
 char	*ft_putsign(int n);
 void	ft_swap(int *a, int *b);
-
+int		ft_isspace(char c);
+char	*ft_strctrim(char const *s, char c);
 
 /* -------- MEM -------- */
 /* - OK - */

@@ -20,7 +20,7 @@ int		main(void)
 	ft_putnbr(strlen("\0"));
 	ft_putchar('\n');
 
-/* strcpy */
+/* strcpy 
 	ft_putendl("--- strcpy ? --- ");
 	ft_putstr("source = sea, destination = turtle ---> ");
 	char src2[]= "sea";
@@ -36,6 +36,7 @@ int		main(void)
 	char src4[]= "sea";
 	char dst4[]= "turtle";
 	ft_putendl(strcpy(dst4, src4));
+*/
 	/*
 	ft_putstr("source = turtle, destination = sea ---> ");
 	char src3[]= "turtle";
@@ -45,6 +46,7 @@ int		main(void)
 
 /* strncpy */
 	ft_putendl("--- strncpy ? --- ");
+/*
 	ft_putstr("source = sea, destination = turtle, n = 2 ---> ");
 	char src5[]= "sea";
 	char dst5[]= "turtle";
@@ -61,8 +63,19 @@ int		main(void)
 	char src9[]= "turtle";
 	char dst9[]= "sea";
 	ft_putendl(ft_strncpy(dst9, src9, 6));
-	
+*/	
+	ft_putstr("source = abc, destination = 888888, n = 6 ---> ");
+	char buf[6];
+	memset(buf, '8', 6);
+	ft_putendl(ft_strncpy(buf, "abc\0\0", 6));
+
 	ft_putendl("Real strncpy test : ");
+	ft_putstr("source = abc, destination = 888888, n = 6 ---> ");
+	char buf2[6];
+	memset(buf2, '8', 6);
+	ft_putendl(strncpy(buf2, "abc\0\0", 6));
+
+/*	
 	ft_putstr("source = sea, destination = turtle, n = 2 ---> ");
 	char src7[]= "sea";
 	char dst7[]= "turtle";
@@ -75,6 +88,7 @@ int		main(void)
 	char src8[]= "turtle";
 	char dst8[]= "sea";
 	ft_putendl(strncpy(dst8, src8, 3));
+*/
 	/*
 	ft_putstr("source = turtle, destination = sea, n = 6 ---> ");
 	char src12[]= "turtle";
