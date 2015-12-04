@@ -6,7 +6,7 @@
 /*   By: agrele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/03 04:05:31 by agrele            #+#    #+#             */
-/*   Updated: 2015/12/04 00:56:33 by agrele           ###   ########.fr       */
+/*   Updated: 2015/12/04 05:30:11 by agrele           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 char	*ft_strctrim(char const *s, char c)
 {
-	char *trim;
-	int i;
-	int j;
-	int k;
+	char	*trim;
+	int		i;
+	int		j;
+	int		k;
 
 	i = 0;
 	j = 0;

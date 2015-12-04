@@ -6,16 +6,11 @@
 /*   By: agrele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 13:32:49 by agrele            #+#    #+#             */
-/*   Updated: 2015/12/04 01:42:09 by agrele           ###   ########.fr       */
+/*   Updated: 2015/12/04 05:42:10 by agrele           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
-
-/* locate first occurence of character c (converted to char)
- * in string s. The terminating \0 is considered part of the string.
- * So if you search for \0 you locate it. 
- * Return pointer to the char, or NULL if it doesn't appear */
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -28,8 +23,7 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)s + ft_strlen(s));
 		if (s[i] == c)
 			return ((char *)s + i);
-		i++;	
+		i++;
 	}
 	return (NULL);
 }
-

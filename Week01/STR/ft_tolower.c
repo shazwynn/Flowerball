@@ -6,13 +6,11 @@
 /*   By: agrele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 13:43:42 by agrele            #+#    #+#             */
-/*   Updated: 2015/11/26 17:43:20 by agrele           ###   ########.fr       */
+/*   Updated: 2015/12/04 05:41:15 by agrele           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
-
-/* converts uppercase to lowercase */
 
 int		ft_tolower(int c)
 {
@@ -20,4 +18,3 @@ int		ft_tolower(int c)
 		c = c + 32;
 	return (c);
 }
-

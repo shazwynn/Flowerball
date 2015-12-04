@@ -6,13 +6,11 @@
 /*   By: agrele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/25 16:25:05 by agrele            #+#    #+#             */
-/*   Updated: 2015/11/26 13:27:11 by agrele           ###   ########.fr       */
+/*   Updated: 2015/12/04 05:39:03 by agrele           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
-
-/* Should not work when Desination is shorter than source ! */
 
 char	*ft_strcpy(char *dst, const char *src)
 {

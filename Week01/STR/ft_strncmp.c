@@ -6,7 +6,7 @@
 /*   By: agrele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/25 20:05:31 by agrele            #+#    #+#             */
-/*   Updated: 2015/11/26 17:27:58 by agrele           ###   ########.fr       */
+/*   Updated: 2015/12/04 05:40:19 by agrele           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n)
 	{
 		res = (unsigned char)s1[i] - (unsigned char)s2[i];
 		if (res != 0)
-			break;
+			break ;
 		i++;
 		n--;
 	}

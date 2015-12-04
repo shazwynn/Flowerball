@@ -6,17 +6,11 @@
 /*   By: agrele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 13:13:49 by agrele            #+#    #+#             */
-/*   Updated: 2015/11/26 16:03:53 by agrele           ###   ########.fr       */
+/*   Updated: 2015/12/04 05:38:49 by agrele           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
-
-/* concatenate strings : append a copy of s2 to end of s1, add terminating '\0'.
- * s1 must have sufficient space to hold the result 
- * source and destination should not overlap 
- * return pointer to s1 
- * initialise s1 with : "word\0         " spaces for s2*/
 
 char	*ft_strcat(char *s1, const char *s2)
 {
