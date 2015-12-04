@@ -1,39 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strctrim.c                                      :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agrele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/03 04:05:31 by agrele            #+#    #+#             */
-/*   Updated: 2015/12/04 00:56:33 by agrele           ###   ########.fr       */
+/*   Created: 2015/12/02 18:36:26 by agrele            #+#    #+#             */
+/*   Updated: 2015/12/03 23:26:45 by agrele           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-char	*ft_strctrim(char const *s, char c)
+/* Redo first checking spaces and shit, then doing an strsub to copy 
+ * That way can malloc the right size for char * trim 
+ * Also you don't really need the ft_isspace function but consider
+ * Making one in the lib for atoi and stuff */
+
+char	*ft_strtrim(char const *s)
 {
 	char *trim;
 	int i;
 	int j;
-	int k;
 
+	trim = ft_strnew(ft_strlen(s) + 1);
 	i = 0;
 	j = 0;
-	k = ft_strlen(s) - 1;
-	while (ft_isspace(s[i]) || s[i] == c)
+	while (ft_isspace(s[i]))
 		i++;
-	while (ft_isspace(s[k]) || s[i] == c)
-		k--;
-	k = k - i;
-	if (k > 0)
+	while (ft_isspace(s[i]) == FALSE)
 	{
-		trim = ft_strnew(k + 1);
-		while (j < k)
-			trim[j++] = s[i++];
-		trim[i] = '\0';
-		return (trim);
+		trim[j] = s[i];
+		i++;
+		j++;
 	}
-	return ("");
+	trim[i] = '\0';
+	return (trim);
 }
