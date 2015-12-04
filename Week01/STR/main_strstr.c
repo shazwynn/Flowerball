@@ -34,21 +34,28 @@ int		main(void)
 */
 
 /* strnstr */
-	ft_putendl("Real strnstr test : ");
+
+	char	buf[10];
+	bzero(buf, 10);
+	strcpy(buf, "un deux 9");
+
+	ft_putendl("~~~~~~~~~~ Real strnstr test ~~~~~~~~~~ ");
 	printf("%s in %s ? n = 8\n", s5, s3);
 	printf("%s\n\n", (strnstr(s3, s5, 8)));
 	printf("%s in %s ? n = 1\n", "", s2);
 	printf("%s\n\n", (strnstr(s2, "", 1)));
 	printf("%s in %s ? n = 10\n", "yoyo", "salut");
 	printf("%s\n\n", strnstr("salut", "yoyo", 10));
+	printf("%s\n\n", strnstr(buf, "deux", 5));
 	
-	ft_putendl("--- strnstr? --- ");
+	ft_putendl("~~~~~~~~~~~~ MY strnstr? ~~~~~~~~~~~~~~~ ");
 	printf("%s in %s ? n = 8 \n", s5, s3);
 	printf("%s\n\n", (ft_strnstr(s3, s5, 8)));
 	printf("%s in %s ? n = 1 \n", "", s2);
 	printf("%s\n\n", (ft_strnstr(s2, "", 1)));
 	printf("%s in %s ? n = 10 \n", "yoyo", "salut");
 	printf("%s\n\n", ft_strnstr("salut", "yoyo", 10));
+	printf("%s\n\n", ft_strnstr(buf, "deux", 5));
 	
 	return (0);
 }
