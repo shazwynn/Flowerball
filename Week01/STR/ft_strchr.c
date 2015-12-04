@@ -6,7 +6,7 @@
 /*   By: agrele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 13:32:49 by agrele            #+#    #+#             */
-/*   Updated: 2015/12/01 13:28:34 by agrele           ###   ########.fr       */
+/*   Updated: 2015/12/04 01:42:09 by agrele           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ char	*ft_strchr(const char *s, int c)
 	i = 0;
 	while (s[i])
 	{
+		if (c == '\0')
+			return ((char *)s + ft_strlen(s));
 		if (s[i] == c)
 			return ((char *)s + i);
 		i++;	
