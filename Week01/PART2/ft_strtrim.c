@@ -6,7 +6,7 @@
 /*   By: agrele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 18:36:26 by agrele            #+#    #+#             */
-/*   Updated: 2015/12/04 01:00:17 by agrele           ###   ########.fr       */
+/*   Updated: 2015/12/04 05:19:30 by agrele           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,16 @@
 
 char	*ft_strtrim(char const *s)
 {
-	char *trim;
-	int i;
-	int j;
-	int k;
+	char	*trim;
+	int		i;
+	int		j;
+	int		k;
 
+	trim = NULL;
 	i = 0;
 	j = 0;
+	if (s == NULL)
+		return (trim);
 	k = ft_strlen(s) - 1;
 	while (ft_isspace(s[i]))
 		i++;
@@ -35,5 +38,5 @@ char	*ft_strtrim(char const *s)
 		trim[i] = '\0';
 		return (trim);
 	}
-	return ("");
+	return (trim);
 }
