@@ -1,4 +1,9 @@
-tatic  void    is_null(char *ptr)
+#include "../libft.h"
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+static  void    is_null(char *ptr)
 {
 	if (!ptr)
 		ft_putstr("NULL");

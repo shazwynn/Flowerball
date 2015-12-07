@@ -4,6 +4,7 @@
 #include <stdlib.h>
 
 char	*ft_wordtrim(char *tmp, char c);
+int		ft_countwords(char const *s, char c);
 void	ft_showchartab(int x, int y, char **tab);
 
 int		main(void)
