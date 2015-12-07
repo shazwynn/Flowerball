@@ -6,7 +6,7 @@
 /*   By: agrele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 18:38:31 by agrele            #+#    #+#             */
-/*   Updated: 2015/12/04 05:26:05 by agrele           ###   ########.fr       */
+/*   Updated: 2015/12/07 02:32:30 by agrele           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,6 @@ int		ft_atoi(const char *str);
 char	*ft_strnew(size_t size);
 char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
-char	*ft_strtrim(char const *s);
 int		ft_strequ(char const *s1, char const *s2);
 int		ft_strnequ(char const *s1, char const *s2, size_t n);
 void	*ft_memalloc(size_t size);
@@ -91,6 +90,7 @@ char	*ft_strmap(char const *s, char (*f)(char));
 
 /* - KO - */
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
+char	*ft_strtrim(char const *s);
 
 /* -------- MISSING -------- */
 

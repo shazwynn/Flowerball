@@ -6,7 +6,7 @@
 /*   By: agrele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/03 00:05:53 by agrele            #+#    #+#             */
-/*   Updated: 2015/12/07 01:34:34 by agrele           ###   ########.fr       */
+/*   Updated: 2015/12/07 02:32:32 by agrele           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,20 +63,25 @@ char	**ft_strsplit(char const *s, char c)
 	int		count;
 	char	*tmp;
 	int		i;
+	int		j;
 
+	j = 0;
 	tmp = ft_strdup(s);
 	count = ft_countwords(s, c);
 	tab = (char **)malloc(sizeof(char *) * count + 1);
-	while (count > 0 && tmp[0])
+	while (j < count && tmp[0])
 	{
 		i = 0;
 		if (tmp[i] != c)
 		{
-			while (tmp[i] != c && tmp[i + 1])
+			while (tmp[i] != c && tmp[i + 1]) // || tmp[(ft_strlen(tmp))] != c))
 				i++;
-			tab[c] = ft_strsub(tmp, 0, i);
+			if (tmp[ft_strlen(tmp) - 1] != c)
+				i++;
+			tab[j] = ft_strnew(i);
+			ft_strncpy(tab[j], tmp, i);
 //	*(tab + c) = ft_strsub(tmp, 0, i);
-			c--;
+			j++;
 			tmp = tmp + i;
 		}
 		else if (tmp[i] == c)
