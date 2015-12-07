@@ -6,7 +6,7 @@
 /*   By: agrele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/03 00:08:42 by agrele            #+#    #+#             */
-/*   Updated: 2015/12/07 04:30:32 by agrele           ###   ########.fr       */
+/*   Updated: 2015/12/07 04:03:15 by agrele           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,10 @@ int		ft_digits(int n)
 {
 	int k;
 
-	k = 1;
 	if (n < 0)
-	{
 		n = -n;
-		k++;
-	}
-	while (n)
+	k = 0;
+	while (n > 9)
 	{	k++;
 		n = n / 10;
 	}
@@ -33,22 +30,23 @@ char	*ft_itoa(int n)
 {
 	char *str;
 	int k;
+	int neg;
 
 	k = ft_digits(n);
-	str = ft_strnew(k);
+	str = ft_strnew(k + 2);
+	neg = 0;
 	if (n < 0)
 	{
 		n = -n;
 		str[0] = '-';
+		neg = 1;
 	}
-	while (n)
+	while (n > 9)
 	{
-		str[k - 2] = (n % 10 + '0');
+		str[k] = (n % 10) + '0';
 		n = n / 10;
 		k--;
 	}
-	str[k] = n + '0';
-	if (k != 0)
-		str[k--] = '8';
+	str[neg] = n + '0';
 	return (str);
 }
