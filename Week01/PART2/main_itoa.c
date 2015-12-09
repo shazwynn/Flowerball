@@ -5,15 +5,16 @@
 
 int		main(void)
 {
-/* ft_strrev 
+/* ft_strrev */
 	ft_putendl("--- strrev ? --- ");
-	ft_putendl("bonjour");
-	ft_putendl(ft_strrev(""));
-	ft_putendl(ft_strrev("bonjour"));
-	ft_putendl(ft_strrev("h"));
-	ft_putendl(ft_strrev("TURTLES"));
-	ft_putendl(ft_strrev("\nPAN  DA"));
-*/
+	ft_putendl("bonjouri");
+	printf("result = %s\n", ft_strrev("bonjouri"));
+//	ft_putendl(ft_strrev("bonjouri"));
+//	ft_putendl(ft_strrev("bonjour"));
+//	ft_putendl(ft_strrev("h"));
+//	ft_putendl(ft_strrev("TURTLES"));
+//	ft_putendl(ft_strrev("\nPAN  DA"));
+
 /* itoa */
 	ft_putendl("--- itoa ? --- ");
 	ft_putendl(ft_itoa(0));
