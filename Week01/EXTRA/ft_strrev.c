@@ -1,42 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agrele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/02 18:36:26 by agrele            #+#    #+#             */
-/*   Updated: 2015/12/09 17:02:50 by agrele           ###   ########.fr       */
+/*   Created: 2015/12/09 17:48:23 by agrele            #+#    #+#             */
+/*   Updated: 2015/12/09 17:54:19 by agrele           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-char	*ft_strtrim(char const *s)
+char	*ft_strrev(char *str)
 {
-	char	*trim;
-	int		i;
-	int		j;
-	int		k;
+	int i;
+	int len;
+	char temp;
+	int half_len;
 
-	trim = NULL;
 	i = 0;
-	j = 0;
-	if (s == NULL)
-		return (trim);
-	k = ft_strlen(s) - 1;
-	while (ft_isspace(s[i]))
-		i++;
-	while (ft_isspace(s[k]))
-		k--;
-	k = k - i + 1;
-	if (k > 0)
+	len = ft_strlen((const char *)str);
+	half_len = len / 2;
+	while (i < half_len)
 	{
-		trim = ft_strnew(k + 1);
-		while (j < k)
-			trim[j++] = s[i++];
-		trim[i] = '\0';
-		return (trim);
+		temp = str[i];
+		str[i] = str[len - 1];
+		str[len - 1] = temp;
+		i++;
+		len--;
 	}
-	return (trim);
+	return(str);
 }

@@ -6,7 +6,7 @@
 /*   By: agrele <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 18:38:31 by agrele            #+#    #+#             */
-/*   Updated: 2015/12/07 02:32:30 by agrele           ###   ########.fr       */
+/*   Updated: 2015/12/09 17:49:01 by agrele           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # define FALSE 0
 
 /* REMOVE ALL RESTRICT */ 
+/* DECLARATIONS EN STATIC */
 
 /* NORMINETTE OK */
 
@@ -64,6 +65,7 @@ char	*ft_putsign(int n);
 void	ft_swap(int *a, int *b);
 int		ft_isspace(char c);
 char	*ft_strctrim(char const *s, char c);
+char	*ft_strrev(char *str);
 
 /* -------- MEM -------- */
 void	*ft_memset(void *b, int c, size_t len);
